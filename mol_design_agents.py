@@ -32,30 +32,30 @@ from academy.agent import loop
 
 logger = logging.getLogger(__name__)
 
-_ARGO_URL = "https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/"
-_ARGO_USER = os.environ.get("ARGO_USER", "")
+_SomeAPI_URL = "https://"
+_SomeAPI_USER = os.environ.get("SomeAPI_USER", "")
 
 
-class _ArgoResponse:
+class _SomeAPIResponse:
     def __init__(self, content: str, tool_calls: list | None = None) -> None:
         self.content = content
         self.tool_calls = tool_calls or []
 
 
-class ArgoLLM:
-    """Drop-in replacement for ChatOpenAI that routes calls through the Argo gateway."""
+class SomeAPILLM:
+    """Drop-in replacement for ChatOpenAI that routes calls through the SomeAPI gateway."""
 
     def __init__(self, model: str, temperature: float = 0.1) -> None:
         self.model = model
         self.temperature = temperature
         self._tools: list | None = None
 
-    def bind_tools(self, tools: list) -> ArgoLLM:
-        bound = ArgoLLM(self.model, self.temperature)
+    def bind_tools(self, tools: list) -> SomeAPILLM:
+        bound = SomeAPILLM(self.model, self.temperature)
         bound._tools = tools
         return bound
 
-    async def ainvoke(self, messages: list) -> _ArgoResponse:
+    async def ainvoke(self, messages: list) -> _SomeAPIResponse:
         system_content = ""
         user_content = ""
         for msg in messages:
@@ -76,7 +76,7 @@ class ArgoLLM:
         is_claude = self.model.lower().startswith("claude")
         if is_claude:
             payload = {
-                "user": _ARGO_USER,
+                "user": _SomeAPI_USER,
                 "model": self.model,
                 "messages": [
                     {"role": "system", "content": system_content},
@@ -87,7 +87,7 @@ class ArgoLLM:
             }
         else:
             payload = {
-                "user": _ARGO_USER,
+                "user": _SomeAPI_USER,
                 "model": self.model,
                 "system": system_content,
                 "prompt": [user_content],
@@ -98,7 +98,7 @@ class ArgoLLM:
 
         def _post() -> dict:
             resp = requests.post(
-                _ARGO_URL,
+                _SomeAPI_URL,
                 data=json.dumps(payload),
                 headers={"Content-Type": "application/json"},
             )
@@ -116,9 +116,9 @@ class ArgoLLM:
                 tool_calls = parsed.get('tool_calls', [])
             except (json.JSONDecodeError, ValueError):
                 tool_calls = []
-            return _ArgoResponse(content=content, tool_calls=tool_calls)
+            return _SomeAPIResponse(content=content, tool_calls=tool_calls)
 
-        return _ArgoResponse(content=content)
+        return _SomeAPIResponse(content=content)
 
 
 def _generate_initial_xyz(mol_string: str) -> str:
@@ -293,7 +293,7 @@ class XTBSimulationAgent(Agent):
         self._lg_callbacks: list = []
         campaign_id = os.environ.get('FLOWCEPT_CAMPAIGN_ID')
         if campaign_id:
-            # ── Block 1: interceptors + ArgoLLM patch (critical path) ──────
+            # ── Block 1: interceptors + SomeAPILLM patch (critical path) ──────
             # This block must succeed for any provenance to work.  It does NOT
             # import langchain_core so it is independent of handler availability.
             try:
@@ -328,9 +328,9 @@ class XTBSimulationAgent(Agent):
                 # into the same stats object for a comprehensive report.
                 _ap._PROV_STATS = self._prov_stats
 
-                # Patch ArgoLLM here, before handler build, so LLM calls are
+                # Patch SomeAPILLM here, before handler build, so LLM calls are
                 # always traced even if langchain_core is unavailable.
-                _orig_ainvoke = ArgoLLM.ainvoke
+                _orig_ainvoke = SomeAPILLM.ainvoke
                 _interceptor_ref = self._lg_interceptor
                 _stats_ref = self._prov_stats
 
@@ -350,7 +350,7 @@ class XTBSimulationAgent(Agent):
                     t_prov = _time.perf_counter()
                     try:
                         _interceptor_ref.intercept_task({
-                            'activity_id': f'argo_llm/{self_llm.model}',
+                            'activity_id': f'SomeAPI_llm/{self_llm.model}',
                             'subtype': 'llm_call',
                             'status': 'FINISHED',
                             'used': {
@@ -371,7 +371,7 @@ class XTBSimulationAgent(Agent):
                     _stats_ref.record('llm_intercept', _time.perf_counter() - t_prov)
                     return result
 
-                ArgoLLM.ainvoke = _traced_ainvoke
+                SomeAPILLM.ainvoke = _traced_ainvoke
                 logger.info('Flowcept provenance enabled for this worker.')
             except Exception as exc:
                 logger.warning('Flowcept init failed in worker: %s', exc)
@@ -380,7 +380,7 @@ class XTBSimulationAgent(Agent):
 
             # ── Block 2: LangGraph callback handler (optional) ─────────────
             # Depends on langchain_core.  Failure here does not affect the
-            # ArgoLLM patch or academy-level provenance set up above.
+            # SomeAPILLM patch or academy-level provenance set up above.
             if self._lg_interceptor is not None:
                 try:
                     from flowcept.agents.langgraph.langgraph_plugin import _build_handler_class
@@ -395,8 +395,8 @@ class XTBSimulationAgent(Agent):
         self.pool = ProcessPoolExecutor(max_workers=n_workers)
 
         tools = [tool(self.compute_ionization_energy)]
-        self.reasoning_llm = ArgoLLM(model=self.reasoning_model)
-        self.generation_llm = ArgoLLM(model=self.generation_model)
+        self.reasoning_llm = SomeAPILLM(model=self.reasoning_model)
+        self.generation_llm = SomeAPILLM(model=self.generation_model)
         self.tools_by_name = {tool.name: tool for tool in tools}
         self.llm_with_tools = self.generation_llm.bind_tools(tools)
 
