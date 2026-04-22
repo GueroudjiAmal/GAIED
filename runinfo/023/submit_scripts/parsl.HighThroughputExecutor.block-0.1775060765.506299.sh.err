@@ -1,0 +1,123 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/023/submit_scripts/parsl.HighThroughputExecutor.block-0.1775060765.506299.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Previous Simulations: 0
+New Simulations: 6
+Previous Simulations: 0
+New Simulations: 8
+[11:27:27] Can't kekulize mol.  Unkekulized atoms: 3
+[11:27:27] Can't kekulize mol.  Unkekulized atoms: 1
+[11:27:27] Can't kekulize mol.  Unkekulized atoms: 3
+[11:27:27] Can't kekulize mol.  Unkekulized atoms: 3
+[11:27:28] Can't kekulize mol.  Unkekulized atoms: 2
+[11:27:28] Can't kekulize mol.  Unkekulized atoms: 4
+Error in loop 'conduct_simulation_campaign' (signaling shutdown: True)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 827, in conduct_simulation_campaign
+    await agent.ainvoke(
+    ...<2 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 711, in ainvoke
+    input = await step.ainvoke(input, config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/graph/_branch.py", line 189, in _aroute
+    result = await self.path.ainvoke(value, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 774, in should_continue
+    if current_best > _best_energy:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'float'
+During task with name 'conclude' and id '797fe347-580f-7a90-341c-9f45a0d1346b'
+Failure running agent on worker (AgentId<42fe6fc1>)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/manager.py", line 71, in _run_agent_async
+    async with Runtime(
+               ~~~~~~~^
+        agent,
+        ^^^^^^
+    ...<2 lines>...
+        registration=spec.registration,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as runtime:
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 185, in __aexit__
+    await self._shutdown()
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/flowcept/agents/academy/academy_plugin.py", line 680, in _shutdown_with_prov
+    await _orig_shutdown(self)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 528, in _shutdown
+    raise_exceptions(
+    ~~~~~~~~~~~~~~~~^
+        (e for _, e in self._loop_exceptions),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message='Caught failures in agent loops while shutting down.',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/exception.py", line 207, in raise_exceptions
+    raise excs[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 827, in conduct_simulation_campaign
+    await agent.ainvoke(
+    ...<2 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 711, in ainvoke
+    input = await step.ainvoke(input, config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/graph/_branch.py", line 189, in _aroute
+    result = await self.path.ainvoke(value, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 464, in ainvoke
+    ret = await asyncio.create_task(coro, context=context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 774, in should_continue
+    if current_best > _best_energy:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'float'
+During task with name 'conclude' and id '797fe347-580f-7a90-341c-9f45a0d1346b'
+Terminated

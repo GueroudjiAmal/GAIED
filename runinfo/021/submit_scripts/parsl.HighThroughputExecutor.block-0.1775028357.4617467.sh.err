@@ -1,0 +1,261 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/021/submit_scripts/parsl.HighThroughputExecutor.block-0.1775028357.4617467.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Previous Simulations: 0
+New Simulations: 8
+Previous Simulations: 0
+New Simulations: 11
+Previous Simulations: 8
+New Simulations: 10
+Previous Simulations: 11
+New Simulations: 6
+Previous Simulations: 16
+New Simulations: 20
+Previous Simulations: 17
+New Simulations: 12
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x7af289ebdc50>
+Previous Simulations: 29
+New Simulations: 3
+Previous Simulations: 35
+New Simulations: 13
+Previous Simulations: 32
+New Simulations: 10
+[03:03:10] Explicit valence for atom # 2 O, 3, is greater than permitted
+Previous Simulations: 46
+New Simulations: 9
+Previous Simulations: 41
+New Simulations: 7
+[03:13:09] Explicit valence for atom # 2 N, 4, is greater than permitted
+Previous Simulations: 55
+New Simulations: 8
+Previous Simulations: 48
+New Simulations: 5
+Previous Simulations: 55
+New Simulations: 10
+Previous Simulations: 52
+New Simulations: 13
+[03:32:11] Explicit valence for atom # 1 N, 4, is greater than permitted
+[03:32:11] Explicit valence for atom # 2 N, 3, is greater than permitted
+Previous Simulations: 59
+New Simulations: 13
+Previous Simulations: 65
+New Simulations: 9
+Previous Simulations: 72
+New Simulations: 5
+Previous Simulations: 75
+New Simulations: 5
+Previous Simulations: 74
+New Simulations: 5
+[03:54:44] Explicit valence for atom # 2 C, 5, is greater than permitted
+Previous Simulations: 78
+New Simulations: 8
+Previous Simulations: 79
+New Simulations: 4
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x7af289f3cf50>
+Previous Simulations: 79
+New Simulations: 3
+Previous Simulations: 80
+New Simulations: 9
+[04:05:30] Explicit valence for atom # 2 C, 5, is greater than permitted
+[04:05:30] Explicit valence for atom # 1 C, 5, is greater than permitted
+Previous Simulations: 85
+New Simulations: 20
+Previous Simulations: 89
+New Simulations: 12
+Previous Simulations: 88
+New Simulations: 13
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x7af289f3d730>
+Previous Simulations: 99
+New Simulations: 5
+Previous Simulations: 88
+New Simulations: 16
+Previous Simulations: 100
+New Simulations: 5
+[04:39:20] Explicit valence for atom # 1 C, 5, is greater than permitted
+Previous Simulations: 102
+New Simulations: 8
+[04:54:27] [04:54:27] [04:54:27] Explicit valence for atom # 2 C, 5, is greater than permittedExplicit valence for atom # 1 C, 5, is greater than permittedExplicit valence for atom # 1 C, 5, is greater than permitted
+
+
+Previous Simulations: 101
+New Simulations: 14
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x7540c8920fb0>
+Previous Simulations: 102
+New Simulations: 3
+Previous Simulations: 110
+New Simulations: 4
+[05:04:56] Explicit valence for atom # 2 C, 5, is greater than permitted
+Previous Simulations: 105
+New Simulations: 3
+Previous Simulations: 111
+New Simulations: 5
+Previous Simulations: 105
+New Simulations: 12
+Previous Simulations: 111
+New Simulations: 4
+Previous Simulations: 105
+New Simulations: 6
+Previous Simulations: 112
+New Simulations: 9
+Previous Simulations: 112
+New Simulations: 23
+[05:20:39] Explicit valence for atom # 2 N, 4, is greater than permitted
+[05:20:39] Explicit valence for atom # 1 N, 4, is greater than permitted
+[05:20:39] Explicit valence for atom # 2 O, 3, is greater than permitted
+Previous Simulations: 109
+New Simulations: 16
+Previous Simulations: 112
+New Simulations: 6
+[05:24:18] Explicit valence for atom # 2 N, 4, is greater than permitted
+[05:24:18] Explicit valence for atom # 1 N, 4, is greater than permitted
+Previous Simulations: 112
+New Simulations: 8
+Error in loop 'conduct_simulation_campaign' (signaling shutdown: True)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 792, in conduct_simulation_campaign
+    await agent.ainvoke(
+    ...<2 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 673, in critique
+    response = await self.generation_llm.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<22 lines>...
+    )
+    ^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 343, in _traced_ainvoke
+    result = await _orig_ainvoke(self_llm, messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 108, in ainvoke
+    data = await asyncio.to_thread(_post)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 105, in _post
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/
+During task with name 'critique' and id 'b11c0155-e5f6-9342-0b20-3da99b00f941'
+Failure running agent on worker (AgentId<c3458d8c>)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/manager.py", line 71, in _run_agent_async
+    async with Runtime(
+               ~~~~~~~^
+        agent,
+        ^^^^^^
+    ...<2 lines>...
+        registration=spec.registration,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as runtime:
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 185, in __aexit__
+    await self._shutdown()
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/flowcept/agents/academy/academy_plugin.py", line 680, in _shutdown_with_prov
+    await _orig_shutdown(self)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 528, in _shutdown
+    raise_exceptions(
+    ~~~~~~~~~~~~~~~~^
+        (e for _, e in self._loop_exceptions),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message='Caught failures in agent loops while shutting down.',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/exception.py", line 207, in raise_exceptions
+    raise excs[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 792, in conduct_simulation_campaign
+    await agent.ainvoke(
+    ...<2 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 673, in critique
+    response = await self.generation_llm.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<22 lines>...
+    )
+    ^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 343, in _traced_ainvoke
+    result = await _orig_ainvoke(self_llm, messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 108, in ainvoke
+    data = await asyncio.to_thread(_post)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 105, in _post
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/
+During task with name 'critique' and id 'b11c0155-e5f6-9342-0b20-3da99b00f941'
+/home/agueroudji/miniconda3/envs/07/lib/python3.13/multiprocessing/resource_tracker.py:276: UserWarning: resource_tracker: There appear to be 7 leaked semaphore objects to clean up at shutdown: {'/mp-t82y_bq0', '/mp-jjs5klyb', '/mp-ou7wqw20', '/mp-tsm1spmt', '/mp-_7tam4c0', '/mp-bu_bhheq', '/mp-6wbx5spy'}
+  warnings.warn(

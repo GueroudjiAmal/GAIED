@@ -1,0 +1,4 @@
+1775023089.087367 2026-04-01 00:58:09 HTEX-Worker-0-2052617 MainThread-132844208744256 parsl.executors.high_throughput.process_worker_pool:659 worker INFO: Worker 0 started
+1775023089.088755 2026-04-01 00:58:09 HTEX-Worker-0-2052617 MainThread-132844208744256 parsl.executors.high_throughput.process_worker_pool:772 worker INFO: Received executor task 2
+1775023090.400132 2026-04-01 00:58:10 HTEX-Worker-0-2052617 MainThread-132844208744256 parsl.executors.high_throughput.process_worker_pool:806 worker INFO: Completed executor task 2
+1775023090.400905 2026-04-01 00:58:10 HTEX-Worker-0-2052617 MainThread-132844208744256 parsl.executors.high_throughput.process_worker_pool:818 worker INFO: All processing finished for executor task 2

@@ -1,0 +1,24 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/031/submit_scripts/parsl.HighThroughputExecutor.block-0.1775092671.1978135.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Previous Simulations: 0
+New Simulations: 6
+Previous Simulations: 0
+New Simulations: 8
+[20:19:12] Can't kekulize mol.  Unkekulized atoms: 3
+[20:19:12] Can't kekulize mol.  Unkekulized atoms: 2
+[20:19:12] Can't kekulize mol.  Unkekulized atoms: 2 3 5
+[20:19:12] Explicit valence for atom # 4 F, 2, is greater than permitted
+[20:19:12] Can't kekulize mol.  Unkekulized atoms: 3
+[20:19:14] SMILES Parse Error: syntax error while parsing: FC(F)(F)C(=O)NH2
+[20:19:14] SMILES Parse Error: check for mistakes around position 15:
+[20:19:14] FC(F)(F)C(=O)NH2
+[20:19:14] ~~~~~~~~~~~~~~^
+[20:19:14] SMILES Parse Error: Failed parsing SMILES 'FC(F)(F)C(=O)NH2' for input: 'FC(F)(F)C(=O)NH2'
+[20:19:14] SMILES Parse Error: syntax error while parsing: FC(F)(F)C(=O)NHC(N)=O
+[20:19:14] SMILES Parse Error: check for mistakes around position 15:
+[20:19:14] FC(F)(F)C(=O)NHC(N)=O
+[20:19:14] ~~~~~~~~~~~~~~^
+[20:19:14] SMILES Parse Error: Failed parsing SMILES 'FC(F)(F)C(=O)NHC(N)=O' for input: 'FC(F)(F)C(=O)NHC(N)=O'
+/home/agueroudji/miniconda3/envs/07/lib/python3.13/multiprocessing/resource_tracker.py:276: UserWarning: resource_tracker: There appear to be 7 leaked semaphore objects to clean up at shutdown: {'/mp-zsnhfw2y', '/mp-4ob7t1w3', '/mp-_5f3b9wr', '/mp-fcz5wjcm', '/mp-0pz1zb37', '/mp-yhtlreko', '/mp-0g5ejrlj'}
+  warnings.warn(

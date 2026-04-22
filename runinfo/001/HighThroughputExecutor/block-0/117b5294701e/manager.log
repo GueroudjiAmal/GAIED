@@ -1,0 +1,35 @@
+1774911739.722270 2026-03-30 18:02:19 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:949 <module> INFO: 
+  Python version: 3.13.0 | packaged by Anaconda, Inc. | (main, Oct  7 2024, 21:29:38) [GCC 11.2.0]
+  Debug logging: False
+  Certificates dir: /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/001/HighThroughputExecutor/certificates
+  Log dir: /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/001/HighThroughputExecutor
+  Manager ID: 117b5294701e
+  Block ID: 0
+  cores_per_worker: 1.0
+  mem_per_worker: None
+  Interchange port: 54883
+  addresses: 108.75.175.142,127.0.0.1,172.18.0.1,192.168.1.65,172.17.0.1,172.16.10.1,172.19.0.1
+  max_workers_per_node: 2
+  poll_period: 10
+  address_probe_timeout: 30
+  Prefetch capacity: 0
+  Heartbeat threshold: 120
+  Heartbeat period: 30
+  Drain period: None
+  CPU affinity: none
+  Accelerators: 
+  enable_mpi_mode: False
+  mpi_launcher: mpiexec
+1774911739.722364 2026-03-30 18:02:19 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:160 __init__ INFO: Manager initializing
+1774911739.731087 2026-03-30 18:02:19 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:180 __init__ INFO: Probe discovered interchange url: tcp://127.0.0.1:54883
+1774911740.160959 2026-03-30 18:02:20 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:253 __init__ INFO: Manager will spawn 2 workers
+1774911740.162742 2026-03-30 18:02:20 MainProcess-1926862 Interchange-Communicator-134971998512832 parsl.executors.high_throughput.process_worker_pool:303 interchange_communicator INFO: starting
+1774911740.163584 2026-03-30 18:02:20 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:534 start INFO: Manager threads started
+1774911740.164018 2026-03-30 18:02:20 MainProcess-1926862 Interchange-Communicator-134971998512832 parsl.executors.high_throughput.process_worker_pool:316 interchange_communicator INFO: Manager task pipe connected to interchange
+1774911740.166916 2026-03-30 18:02:20 MainProcess-1926862 Interchange-Communicator-134971998512832 parsl.executors.high_throughput.process_worker_pool:328 interchange_communicator INFO: Successfully connected to interchange via URL: tcp://127.0.0.1:54883
+1774911920.293355 2026-03-30 18:05:20 MainProcess-1926862 Interchange-Communicator-134971998512832 parsl.executors.high_throughput.process_worker_pool:411 interchange_communicator CRITICAL: Missing contact with interchange beyond heartbeat_threshold
+1774911920.293527 2026-03-30 18:05:20 MainProcess-1926862 Interchange-Communicator-134971998512832 parsl.executors.high_throughput.process_worker_pool:413 interchange_communicator CRITICAL: Exiting
+1774911920.293613 2026-03-30 18:05:20 MainProcess-1926862 Interchange-Communicator-134971998512832 parsl.executors.high_throughput.process_worker_pool:417 interchange_communicator INFO: Exiting
+1774911920.294283 2026-03-30 18:05:20 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:538 start INFO: Stop event set; terminating worker processes
+1774911920.316817 2026-03-30 18:05:20 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:580 start INFO: process_worker_pool ran for 180.59440517425537 seconds
+1774911920.316957 2026-03-30 18:05:20 MainProcess-1926862 MainThread-134972074911552 parsl.executors.high_throughput.process_worker_pool:1000 <module> INFO: Process worker pool exiting normally

@@ -1,0 +1,263 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/006/submit_scripts/parsl.HighThroughputExecutor.block-0.1775023320.6323917.sh: line 1: cd: too many arguments
+Error in loop 'conduct_simulation_campaign' (signaling shutdown: True)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 592, in conduct_simulation_campaign
+    await agent.ainvoke(self.search_state, {'recursion_limit': 10000})
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 271, in plan
+    response = await self.reasoning_llm.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<29 lines>...
+    )
+    ^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 108, in ainvoke
+    data = await asyncio.to_thread(_post)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 105, in _post
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/
+During task with name 'plan' and id '1f69f123-07bd-3cb5-65c7-b398254d452c'
+Failure running agent on worker (AgentId<6ce7b3f0>)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/manager.py", line 71, in _run_agent_async
+    async with Runtime(
+               ~~~~~~~^
+        agent,
+        ^^^^^^
+    ...<2 lines>...
+        registration=spec.registration,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as runtime:
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 185, in __aexit__
+    await self._shutdown()
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 528, in _shutdown
+    raise_exceptions(
+    ~~~~~~~~~~~~~~~~^
+        (e for _, e in self._loop_exceptions),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message='Caught failures in agent loops while shutting down.',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/exception.py", line 207, in raise_exceptions
+    raise excs[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 592, in conduct_simulation_campaign
+    await agent.ainvoke(self.search_state, {'recursion_limit': 10000})
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 271, in plan
+    response = await self.reasoning_llm.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<29 lines>...
+    )
+    ^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 108, in ainvoke
+    data = await asyncio.to_thread(_post)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 105, in _post
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/
+During task with name 'plan' and id '1f69f123-07bd-3cb5-65c7-b398254d452c'
+Error in loop 'conduct_simulation_campaign' (signaling shutdown: True)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 592, in conduct_simulation_campaign
+    await agent.ainvoke(self.search_state, {'recursion_limit': 10000})
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 271, in plan
+    response = await self.reasoning_llm.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<29 lines>...
+    )
+    ^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 108, in ainvoke
+    data = await asyncio.to_thread(_post)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 105, in _post
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/
+During task with name 'plan' and id 'eacaf176-4ed2-ae6a-d5b5-421d24e96523'
+Failure running agent on worker (AgentId<14e84669>)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/manager.py", line 71, in _run_agent_async
+    async with Runtime(
+               ~~~~~~~^
+        agent,
+        ^^^^^^
+    ...<2 lines>...
+        registration=spec.registration,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as runtime:
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 185, in __aexit__
+    await self._shutdown()
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 528, in _shutdown
+    raise_exceptions(
+    ~~~~~~~~~~~~~~~~^
+        (e for _, e in self._loop_exceptions),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message='Caught failures in agent loops while shutting down.',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/exception.py", line 207, in raise_exceptions
+    raise excs[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 592, in conduct_simulation_campaign
+    await agent.ainvoke(self.search_state, {'recursion_limit': 10000})
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 271, in plan
+    response = await self.reasoning_llm.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<29 lines>...
+    )
+    ^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 108, in ainvoke
+    data = await asyncio.to_thread(_post)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 105, in _post
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://apps.inside.anl.gov/argoapi/api/v1/resource/chat/
+During task with name 'plan' and id 'eacaf176-4ed2-ae6a-d5b5-421d24e96523'

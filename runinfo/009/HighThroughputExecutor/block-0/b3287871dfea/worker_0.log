@@ -1,0 +1,5 @@
+1775023671.312201 2026-04-01 01:07:51 HTEX-Worker-0-2053514 MainThread-126852403795776 parsl.executors.high_throughput.process_worker_pool:659 worker INFO: Worker 0 started
+1775023671.313499 2026-04-01 01:07:51 HTEX-Worker-0-2053514 MainThread-126852403795776 parsl.executors.high_throughput.process_worker_pool:772 worker INFO: Received executor task 2
+1775023837.027811 2026-04-01 01:10:37 HTEX-Worker-0-2053514 MainThread-126852403795776 parsl.executors.high_throughput.process_worker_pool:806 worker INFO: Completed executor task 2
+1775023837.031498 2026-04-01 01:10:37 HTEX-Worker-0-2053514 MainThread-126852403795776 parsl.executors.high_throughput.process_worker_pool:818 worker INFO: All processing finished for executor task 2
+1775023897.091434 2026-04-01 01:11:37 HTEX-Worker-0-2053514 MainThread-126852403795776 parsl.executors.high_throughput.process_worker_pool:752 manager_is_alive CRITICAL: Manager (2053502) died; worker 0 shutting down

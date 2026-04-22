@@ -1,7 +1,9 @@
 ## Molecular Design Using Parallel Reasoning
 
-This example illustrates combing multiple LLM-powered reasoners with simulations and parallel execution. Here, a team of agents is deployed to explore different elements of the chemical space, searching for molecules with high ionization energy.
-[**LangGraph**](https://docs.langchain.com/oss/python/langgraph/overview)  is used within a single reasoner to coordinate multi-step prompting and tool use, while **Academy** is used to launch and coordinate agents with autonomous behavior in parallel.
+This example is based on [example 07 from the Academy repository](https://github.com/academy-agents/academy/tree/main/examples/07-mol-design), extended with Flowcept provenance instrumentation (see [Provenance Instrumentation](#provenance-instrumentation) below).
+
+This example illustrates combining multiple LLM-powered reasoners with simulations and parallel execution. Here, a team of agents is deployed to explore different elements of the chemical space, searching for molecules with high ionization energy.
+[**LangGraph**](https://docs.langchain.com/oss/python/langgraph/overview) is used within a single reasoner to coordinate multi-step prompting and tool use, while [**Academy**](https://github.com/academy-agents/academy) is used to launch and coordinate agents with autonomous behavior in parallel.
 
 ## Setup
 

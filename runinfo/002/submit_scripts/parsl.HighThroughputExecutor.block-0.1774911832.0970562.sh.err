@@ -1,0 +1,210 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/002/submit_scripts/parsl.HighThroughputExecutor.block-0.1774911832.0970562.sh: line 1: cd: too many arguments
+Error in loop 'conduct_simulation_campaign' (signaling shutdown: True)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 503, in conduct_simulation_campaign
+    await agent.ainvoke(self.search_state, {'recursion_limit': 10000})
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 229, in tool_calling
+    response = await self.llm_with_tools.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 477, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1196, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1154, in agenerate
+    raise exceptions[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1423, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+        messages, stop=stop, run_manager=run_manager, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_openai/chat_models/base.py", line 1752, in _agenerate
+    _handle_openai_bad_request(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_openai/chat_models/base.py", line 1747, in _agenerate
+    raw_response = await self.async_client.with_raw_response.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **payload
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/_legacy_response.py", line 384, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'invalid model ID', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+During task with name 'tool_calling' and id 'cf3e2aa9-d694-2aa4-46f0-36bdc810bf7e'
+Failure running agent on worker (AgentId<04eee0ea>)
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/manager.py", line 71, in _run_agent_async
+    async with Runtime(
+               ~~~~~~~^
+        agent,
+        ^^^^^^
+    ...<2 lines>...
+        registration=spec.registration,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as runtime:
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 185, in __aexit__
+    await self._shutdown()
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 528, in _shutdown
+    raise_exceptions(
+    ~~~~~~~~~~~~~~~~^
+        (e for _, e in self._loop_exceptions),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        message='Caught failures in agent loops while shutting down.',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/exception.py", line 207, in raise_exceptions
+    raise excs[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/runtime.py", line 265, in _execute_loop
+    await method(self._shutdown_event)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/academy/agent.py", line 272, in _wrapped
+    await method(self, shutdown)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 503, in conduct_simulation_campaign
+    await agent.ainvoke(self.search_state, {'recursion_limit': 10000})
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3462, in ainvoke
+    async for chunk in self.astream(
+    ...<29 lines>...
+            chunks.append(chunk)
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3111, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 211, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        step.ainvoke(input, config, **kwargs), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 229, in tool_calling
+    response = await self.llm_with_tools.ainvoke(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<20 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 477, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1196, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1154, in agenerate
+    raise exceptions[0]
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1423, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+        messages, stop=stop, run_manager=run_manager, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_openai/chat_models/base.py", line 1752, in _agenerate
+    _handle_openai_bad_request(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_openai/chat_models/base.py", line 1747, in _agenerate
+    raw_response = await self.async_client.with_raw_response.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **payload
+        ^^^^^^^^^
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/_legacy_response.py", line 384, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/resources/chat/completions/completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/openai/_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'invalid model ID', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+During task with name 'tool_calling' and id 'cf3e2aa9-d694-2aa4-46f0-36bdc810bf7e'

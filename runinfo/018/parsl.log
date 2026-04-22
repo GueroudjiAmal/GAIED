@@ -1,0 +1,125 @@
+1775027422.201025 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:99 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    dependency_resolver=None, 
+    executors=(HighThroughputExecutor(
+        address=None, 
+        address_probe_timeout=None, 
+        available_accelerators=[], 
+        block_error_handler=<function simple_error_handler at 0x773fdcf71580>, 
+        cores_per_worker=1.0, 
+        cpu_affinity='none', 
+        drain_period=None, 
+        encrypted=True, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_launch_cmd=['interchange.py'], 
+        interchange_port_range=(55000, 56000), 
+        label='HighThroughputExecutor', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers_per_node} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --port={worker_port} --cert_dir {cert_dir} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} --drain_period={drain_period} --cpu-affinity {cpu_affinity} {enable_mpi_mode} --mpi-launcher={mpi_launcher} --available-accelerators {accelerators}', 
+        loopback_address='127.0.0.1', 
+        manager_selector=<parsl.executors.high_throughput.manager_selector.RandomManagerSelector object at 0x773fdd099940>, 
+        max_workers_per_node=2, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=LocalProvider(
+            cmd_timeout=30, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+            max_blocks=1, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            worker_init='cd /home/agueroudji/Work/mofa/academy/examples/07-mol-designconda activate ./mol-design;'
+        ), 
+        remote_monitoring_radio=HTEXRadio(), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port=None, 
+        worker_port_range=(54000, 55000), 
+        working_dir=None
+    ),), 
+    exit_mode='cleanup', 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    memoizer=None, 
+    monitoring=None, 
+    project_name=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    std_autopath=None, 
+    strategy='simple', 
+    strategy_period=5, 
+    usage_tracking=0
+)
+1775027422.201373 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:101 __init__ INFO: Parsl version: 2026.03.23
+1775027422.201524 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.usage_tracking.usage:119 __init__ DEBUG: Tracking level: 0
+1775027422.201614 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:124 __init__ INFO: Run id is: d59d2834-4ae7-4f02-a013-820923d2cd2a
+1775027422.258969 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/parsl/dataflow/dflow.py
+1775027422.259048 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/parsl/dataflow/dflow.py
+1775027422.259071 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/parsl/concurrent/__init__.py
+1775027422.259089 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/Work/mofa/academy/examples/07-mol-design/run-07.py
+1775027422.259107 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:137 __init__ DEBUG: Using run-07.py as workflow name
+1775027422.259267 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.memoization:335 start INFO: App caching initialized
+1775027422.259331 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.jobs.strategy:145 __init__ DEBUG: Scaling strategy: simple
+1775027422.259640 2026-04-01 02:10:22 MainProcess-2060540 JobStatusPoller-Timer-Thread-131116139256800-131116137580224 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1775027422.259897 2026-04-01 02:10:22 MainProcess-2060540 JobStatusPoller-Timer-Thread-131116139256800-131116137580224 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-131116139256800
+1775027422.259957 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:440 start DEBUG: Creating CurveZMQ certificates
+1775027422.261855 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:616 _start_result_queue_thread DEBUG: Starting result queue thread
+1775027422.262103 2026-04-01 02:10:22 MainProcess-2060540 HTEX-Result-Queue-Thread-131116006627008 parsl.executors.high_throughput.executor:493 _result_queue_worker DEBUG: Result queue worker starting
+1775027422.262236 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:620 _start_result_queue_thread DEBUG: Started result queue thread: <Thread(HTEX-Result-Queue-Thread, started daemon 131116006627008)>
+1775027422.268059 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:592 _start_local_interchange_process DEBUG: Popened interchange process. Writing config object
+1775027422.268256 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:596 _start_local_interchange_process DEBUG: Sent config object. Requesting worker ports
+1775027422.268333 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775027422.667679 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.zmq_pipes:92 run DEBUG: Polling for command client response or timeout
+1775027422.668042 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775027422.668079 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775027422.668100 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:602 _start_local_interchange_process DEBUG: Interchange process started (<Popen: returncode: None args: ['interchange.py']>).  Worker port: 54361
+1775027422.668153 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:431 initialize_scaling DEBUG: Launch command: process_worker_pool.py  --max_workers_per_node=2 -a 192.168.1.65,127.0.0.1,172.16.10.1,172.18.0.1,172.17.0.1,130.202.232.189,172.19.0.1 -p 0 -c 1.0 -m None --poll 10 --port=54361 --cert_dir /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/018/HighThroughputExecutor/certificates --logdir=/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/018/HighThroughputExecutor --block_id={block_id} --hb_period=30  --hb_threshold=120 --drain_period=None --cpu-affinity none  --mpi-launcher=mpiexec --available-accelerators 
+1775027422.668172 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.executors.high_throughput.executor:433 initialize_scaling DEBUG: Starting HighThroughputExecutor with provider:
+LocalProvider(
+    cmd_timeout=30, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+    max_blocks=1, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    worker_init='cd /home/agueroudji/Work/mofa/academy/examples/07-mol-designconda activate ./mol-design;'
+)
+1775027422.668532 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.jobs.job_status_poller:30 add_executors DEBUG: Adding executor HighThroughputExecutor
+1775027422.674139 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:942 submit DEBUG: Task 0 will be sent to executor HighThroughputExecutor
+1775027422.674275 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:750 _add_output_deps DEBUG: Adding output dependencies
+1775027422.674342 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:991 submit DEBUG: Added output dependencies
+1775027422.674385 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1000 submit DEBUG: Gathering dependencies
+1775027422.674470 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1003 submit DEBUG: Gathered dependencies
+1775027422.674515 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1015 submit INFO: Task 0 submitted for App _run_agent_on_worker, not waiting on any dependency
+1775027422.674592 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1019 submit DEBUG: Task 0 set to pending state with AppFuture: <AppFuture at 0x773fdad641a0 state=pending>
+1775027422.674976 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.memoization:379 check_memo DEBUG: Task 0 will not be memoized
+1775027422.675374 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.executors.high_throughput.executor:703 submit DEBUG: Pushing function <function _run_agent_on_worker at 0x773fdaed7ba0> to queue with args ("_RunSpec(agent=<class 'mol_design_agents.XTBSimulationAgent'>, config=RuntimeConfig(cancel_actions_o...",)
+1775027422.677626 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.executors.high_throughput.zmq_pipes:148 put DEBUG: Sending TasksOutgoing message
+1775027422.677764 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.executors.high_throughput.zmq_pipes:150 put DEBUG: Sent TasksOutgoing message
+1775027422.677927 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.dflow:703 launch_task INFO: Parsl task 0 try 0 launched on executor HighThroughputExecutor with executor id 1
+1775027422.678278 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1775027422.678502 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1775027422.678718 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _launch_if_ready_async on thread Task-Launch_0
+1775027422.679297 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:942 submit DEBUG: Task 1 will be sent to executor HighThroughputExecutor
+1775027422.679408 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:750 _add_output_deps DEBUG: Adding output dependencies
+1775027422.679465 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:991 submit DEBUG: Added output dependencies
+1775027422.679510 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1000 submit DEBUG: Gathering dependencies
+1775027422.679559 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1003 submit DEBUG: Gathered dependencies
+1775027422.679615 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1015 submit INFO: Task 1 submitted for App _run_agent_on_worker, not waiting on any dependency
+1775027422.679707 2026-04-01 02:10:22 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1019 submit DEBUG: Task 1 set to pending state with AppFuture: <AppFuture at 0x773fdae83610 state=pending>
+1775027422.679998 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.memoization:379 check_memo DEBUG: Task 1 will not be memoized
+1775027422.680202 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.executors.high_throughput.executor:703 submit DEBUG: Pushing function <function _run_agent_on_worker at 0x773fdaed7ba0> to queue with args ("_RunSpec(agent=<class 'mol_design_agents.XTBSimulationAgent'>, config=RuntimeConfig(cancel_actions_o...",)
+1775027422.681002 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.executors.high_throughput.zmq_pipes:148 put DEBUG: Sending TasksOutgoing message
+1775027422.681099 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.executors.high_throughput.zmq_pipes:150 put DEBUG: Sent TasksOutgoing message
+1775027422.681171 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.dflow:703 launch_task INFO: Parsl task 1 try 0 launched on executor HighThroughputExecutor with executor id 2
+1775027422.681259 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard out for task 1 will not be redirected.
+1775027422.681321 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard error for task 1 will not be redirected.
+1775027422.681387 2026-04-01 02:10:22 MainProcess-2060540 Task-Launch_0-131115989841600 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _launch_if_ready_async on thread Task-Launch_0
+1775027423.393047 2026-04-01 02:10:23 MainProcess-2060540 MainThread-131118847821632 parsl.dataflow.dflow:1090 atexit_cleanup WARNING: Python is exiting with a DFK still running. You should call parsl.dfk().cleanup() before exiting to release any resources

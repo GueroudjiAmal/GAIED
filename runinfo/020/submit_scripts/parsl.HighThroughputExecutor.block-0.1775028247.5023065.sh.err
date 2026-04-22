@@ -1,0 +1,3 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/020/submit_scripts/parsl.HighThroughputExecutor.block-0.1775028247.5023065.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")

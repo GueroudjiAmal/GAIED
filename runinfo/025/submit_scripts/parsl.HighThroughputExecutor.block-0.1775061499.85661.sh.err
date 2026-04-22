@@ -1,0 +1,32 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/025/submit_scripts/parsl.HighThroughputExecutor.block-0.1775061499.85661.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x7110b0cd2710>
+Previous Simulations: 0
+New Simulations: 3
+Previous Simulations: 0
+New Simulations: 7
+[11:39:38] SMILES Parse Error: syntax error while parsing: NC(=O)NCH2F
+[11:39:38] SMILES Parse Error: check for mistakes around position 9:
+[11:39:38] NC(=O)NCH2F
+[11:39:38] ~~~~~~~~^
+[11:39:38] SMILES Parse Error: Failed parsing SMILES 'NC(=O)NCH2F' for input: 'NC(=O)NCH2F'
+[11:39:38] SMILES Parse Error: syntax error while parsing: NC(=O)NCHF2
+[11:39:38] SMILES Parse Error: check for mistakes around position 9:
+[11:39:38] NC(=O)NCHF2
+[11:39:38] ~~~~~~~~^
+[11:39:38] SMILES Parse Error: Failed parsing SMILES 'NC(=O)NCHF2' for input: 'NC(=O)NCHF2'
+Previous Simulations: 3
+New Simulations: 6
+Previous Simulations: 7
+New Simulations: 4
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x7110b0c9f7a0>
+Previous Simulations: 9
+New Simulations: 3
+Previous Simulations: 11
+New Simulations: 7
+[11:45:33] Explicit valence for atom # 3 O, 2, is greater than permitted
+Previous Simulations: 10
+New Simulations: 12

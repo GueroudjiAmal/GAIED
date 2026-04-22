@@ -1,0 +1,29 @@
+1775068090.032278 2026-04-01 13:28:10 MainProcess-2100954 MainThread-126714851018560 parsl.executors.high_throughput.process_worker_pool:949 <module> INFO: 
+  Python version: 3.13.0 | packaged by Anaconda, Inc. | (main, Oct  7 2024, 21:29:38) [GCC 11.2.0]
+  Debug logging: False
+  Certificates dir: /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/030/HighThroughputExecutor/certificates
+  Log dir: /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/030/HighThroughputExecutor
+  Manager ID: 65f50b271208
+  Block ID: 0
+  cores_per_worker: 1.0
+  mem_per_worker: None
+  Interchange port: 54243
+  addresses: 172.19.0.1,172.18.0.1,192.168.1.65,127.0.0.1,172.17.0.1,130.202.232.189,172.16.10.1
+  max_workers_per_node: 2
+  poll_period: 10
+  address_probe_timeout: 30
+  Prefetch capacity: 0
+  Heartbeat threshold: 120
+  Heartbeat period: 30
+  Drain period: None
+  CPU affinity: none
+  Accelerators: 
+  enable_mpi_mode: False
+  mpi_launcher: mpiexec
+1775068090.032382 2026-04-01 13:28:10 MainProcess-2100954 MainThread-126714851018560 parsl.executors.high_throughput.process_worker_pool:160 __init__ INFO: Manager initializing
+1775068090.042599 2026-04-01 13:28:10 MainProcess-2100954 MainThread-126714851018560 parsl.executors.high_throughput.process_worker_pool:180 __init__ INFO: Probe discovered interchange url: tcp://172.19.0.1:54243
+1775068090.483851 2026-04-01 13:28:10 MainProcess-2100954 MainThread-126714851018560 parsl.executors.high_throughput.process_worker_pool:253 __init__ INFO: Manager will spawn 2 workers
+1775068090.485790 2026-04-01 13:28:10 MainProcess-2100954 Interchange-Communicator-126714774709952 parsl.executors.high_throughput.process_worker_pool:303 interchange_communicator INFO: starting
+1775068090.486809 2026-04-01 13:28:10 MainProcess-2100954 MainThread-126714851018560 parsl.executors.high_throughput.process_worker_pool:534 start INFO: Manager threads started
+1775068090.487562 2026-04-01 13:28:10 MainProcess-2100954 Interchange-Communicator-126714774709952 parsl.executors.high_throughput.process_worker_pool:316 interchange_communicator INFO: Manager task pipe connected to interchange
+1775068090.490831 2026-04-01 13:28:10 MainProcess-2100954 Interchange-Communicator-126714774709952 parsl.executors.high_throughput.process_worker_pool:328 interchange_communicator INFO: Successfully connected to interchange via URL: tcp://172.19.0.1:54243

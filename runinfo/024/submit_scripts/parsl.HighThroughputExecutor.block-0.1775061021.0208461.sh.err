@@ -1,0 +1,12 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/024/submit_scripts/parsl.HighThroughputExecutor.block-0.1775061021.0208461.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Previous Simulations: 0
+New Simulations: 6
+Previous Simulations: 0
+New Simulations: 13
+Previous Simulations: 6
+New Simulations: 12
+Terminated
+/home/agueroudji/miniconda3/envs/07/lib/python3.13/multiprocessing/resource_tracker.py:276: UserWarning: resource_tracker: There appear to be 7 leaked semaphore objects to clean up at shutdown: {'/mp-g1wuxgzx', '/mp-08xjnhyv', '/mp-5l_yznoh', '/mp-bbtt2o5o', '/mp-ssgpo5e3', '/mp-nzm281ad', '/mp-3g4zrnfo'}
+  warnings.warn(

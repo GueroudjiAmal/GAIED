@@ -1,0 +1,15 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/028/submit_scripts/parsl.HighThroughputExecutor.block-0.1775065919.924192.sh: line 1: cd: too many arguments
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Error in _ConcreteHandler.on_chain_start callback: AttributeError("'SearchState' object has no attribute 'get'")
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x76f849182850>
+Previous Simulations: 0
+New Simulations: 3
+Previous Simulations: 0
+New Simulations: 8
+Previous Simulations: 3
+New Simulations: 7
+Tool calling agent did not call tools!
+<mol_design_agents._ArgoResponse object at 0x76f84917a990>
+Previous Simulations: 10
+New Simulations: 3

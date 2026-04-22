@@ -1,0 +1,321 @@
+1775024878.727067 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:99 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    dependency_resolver=None, 
+    executors=(HighThroughputExecutor(
+        address=None, 
+        address_probe_timeout=None, 
+        available_accelerators=[], 
+        block_error_handler=<function simple_error_handler at 0x7db48ea116c0>, 
+        cores_per_worker=1.0, 
+        cpu_affinity='none', 
+        drain_period=None, 
+        encrypted=True, 
+        heartbeat_period=30, 
+        heartbeat_threshold=120, 
+        interchange_launch_cmd=['interchange.py'], 
+        interchange_port_range=(55000, 56000), 
+        label='HighThroughputExecutor', 
+        launch_cmd='process_worker_pool.py {debug} {max_workers_per_node} -a {addresses} -p {prefetch_capacity} -c {cores_per_worker} -m {mem_per_worker} --poll {poll_period} --port={worker_port} --cert_dir {cert_dir} --logdir={logdir} --block_id={{block_id}} --hb_period={heartbeat_period} {address_probe_timeout_string} --hb_threshold={heartbeat_threshold} --drain_period={drain_period} --cpu-affinity {cpu_affinity} {enable_mpi_mode} --mpi-launcher={mpi_launcher} --available-accelerators {accelerators}', 
+        loopback_address='127.0.0.1', 
+        manager_selector=<parsl.executors.high_throughput.manager_selector.RandomManagerSelector object at 0x7db48eb8d6a0>, 
+        max_workers_per_node=2, 
+        mem_per_worker=None, 
+        poll_period=10, 
+        prefetch_capacity=0, 
+        provider=LocalProvider(
+            cmd_timeout=30, 
+            init_blocks=1, 
+            launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+            max_blocks=1, 
+            min_blocks=0, 
+            nodes_per_block=1, 
+            parallelism=1, 
+            worker_init='cd /home/agueroudji/Work/mofa/academy/examples/07-mol-designconda activate ./mol-design;'
+        ), 
+        remote_monitoring_radio=HTEXRadio(), 
+        storage_access=None, 
+        worker_debug=False, 
+        worker_logdir_root=None, 
+        worker_port=None, 
+        worker_port_range=(54000, 55000), 
+        working_dir=None
+    ),), 
+    exit_mode='cleanup', 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    memoizer=None, 
+    monitoring=None, 
+    project_name=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    std_autopath=None, 
+    strategy='simple', 
+    strategy_period=5, 
+    usage_tracking=0
+)
+1775024878.727357 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:101 __init__ INFO: Parsl version: 2026.03.23
+1775024878.727489 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.usage_tracking.usage:119 __init__ DEBUG: Tracking level: 0
+1775024878.727583 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:124 __init__ INFO: Run id is: 990a11a3-28d4-4317-93d7-fa2f8ad563be
+1775024878.782920 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/parsl/dataflow/dflow.py
+1775024878.782993 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/parsl/dataflow/dflow.py
+1775024878.783015 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/parsl/concurrent/__init__.py
+1775024878.783031 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:131 __init__ DEBUG: Considering candidate for workflow name: /home/agueroudji/Work/mofa/academy/examples/07-mol-design/run-07.py
+1775024878.783050 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:137 __init__ DEBUG: Using run-07.py as workflow name
+1775024878.783198 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.memoization:335 start INFO: App caching initialized
+1775024878.783259 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.jobs.strategy:145 __init__ DEBUG: Scaling strategy: simple
+1775024878.783619 2026-04-01 01:27:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1775024878.783816 2026-04-01 01:27:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024878.783915 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:440 start DEBUG: Creating CurveZMQ certificates
+1775024878.785731 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:616 _start_result_queue_thread DEBUG: Starting result queue thread
+1775024878.785971 2026-04-01 01:27:58 MainProcess-2055276 HTEX-Result-Queue-Thread-138214345389760 parsl.executors.high_throughput.executor:493 _result_queue_worker DEBUG: Result queue worker starting
+1775024878.786051 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:620 _start_result_queue_thread DEBUG: Started result queue thread: <Thread(HTEX-Result-Queue-Thread, started daemon 138214345389760)>
+1775024878.789696 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:592 _start_local_interchange_process DEBUG: Popened interchange process. Writing config object
+1775024878.789754 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:596 _start_local_interchange_process DEBUG: Sent config object. Requesting worker ports
+1775024878.789782 2026-04-01 01:27:58 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024879.168992 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.zmq_pipes:92 run DEBUG: Polling for command client response or timeout
+1775024879.169552 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024879.169619 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024879.169645 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:602 _start_local_interchange_process DEBUG: Interchange process started (<Popen: returncode: None args: ['interchange.py']>).  Worker port: 54483
+1775024879.169695 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:431 initialize_scaling DEBUG: Launch command: process_worker_pool.py  --max_workers_per_node=2 -a 127.0.0.1,172.19.0.1,130.202.232.189,172.17.0.1,192.168.1.65,172.18.0.1,172.16.10.1 -p 0 -c 1.0 -m None --poll 10 --port=54483 --cert_dir /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/HighThroughputExecutor/certificates --logdir=/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/HighThroughputExecutor --block_id={block_id} --hb_period=30  --hb_threshold=120 --drain_period=None --cpu-affinity none  --mpi-launcher=mpiexec --available-accelerators 
+1775024879.169715 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.executors.high_throughput.executor:433 initialize_scaling DEBUG: Starting HighThroughputExecutor with provider:
+LocalProvider(
+    cmd_timeout=30, 
+    init_blocks=1, 
+    launcher=SingleNodeLauncher(debug=True, fail_on_any=False), 
+    max_blocks=1, 
+    min_blocks=0, 
+    nodes_per_block=1, 
+    parallelism=1, 
+    worker_init='cd /home/agueroudji/Work/mofa/academy/examples/07-mol-designconda activate ./mol-design;'
+)
+1775024879.170053 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.jobs.job_status_poller:30 add_executors DEBUG: Adding executor HighThroughputExecutor
+1775024879.176361 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:942 submit DEBUG: Task 0 will be sent to executor HighThroughputExecutor
+1775024879.176514 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:750 _add_output_deps DEBUG: Adding output dependencies
+1775024879.176598 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:991 submit DEBUG: Added output dependencies
+1775024879.176652 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1000 submit DEBUG: Gathering dependencies
+1775024879.176773 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1003 submit DEBUG: Gathered dependencies
+1775024879.176838 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1015 submit INFO: Task 0 submitted for App _run_agent_on_worker, not waiting on any dependency
+1775024879.176933 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1019 submit DEBUG: Task 0 set to pending state with AppFuture: <AppFuture at 0x7db48c91be00 state=pending>
+1775024879.177360 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.memoization:379 check_memo DEBUG: Task 0 will not be memoized
+1775024879.177709 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.executors.high_throughput.executor:703 submit DEBUG: Pushing function <function _run_agent_on_worker at 0x7db48c77bce0> to queue with args ("_RunSpec(agent=<class 'mol_design_agents.XTBSimulationAgent'>, config=RuntimeConfig(cancel_actions_o...",)
+1775024879.180111 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.executors.high_throughput.zmq_pipes:148 put DEBUG: Sending TasksOutgoing message
+1775024879.180324 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.executors.high_throughput.zmq_pipes:150 put DEBUG: Sent TasksOutgoing message
+1775024879.180515 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.dflow:703 launch_task INFO: Parsl task 0 try 0 launched on executor HighThroughputExecutor with executor id 1
+1775024879.180939 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1775024879.181125 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1775024879.181226 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _launch_if_ready_async on thread Task-Launch_0
+1775024879.181863 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:942 submit DEBUG: Task 1 will be sent to executor HighThroughputExecutor
+1775024879.181976 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:750 _add_output_deps DEBUG: Adding output dependencies
+1775024879.182037 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:991 submit DEBUG: Added output dependencies
+1775024879.182082 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1000 submit DEBUG: Gathering dependencies
+1775024879.182143 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1003 submit DEBUG: Gathered dependencies
+1775024879.182201 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1015 submit INFO: Task 1 submitted for App _run_agent_on_worker, not waiting on any dependency
+1775024879.182304 2026-04-01 01:27:59 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1019 submit DEBUG: Task 1 set to pending state with AppFuture: <AppFuture at 0x7db48c91f610 state=pending>
+1775024879.182615 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.memoization:379 check_memo DEBUG: Task 1 will not be memoized
+1775024879.182831 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.executors.high_throughput.executor:703 submit DEBUG: Pushing function <function _run_agent_on_worker at 0x7db48c77bce0> to queue with args ("_RunSpec(agent=<class 'mol_design_agents.XTBSimulationAgent'>, config=RuntimeConfig(cancel_actions_o...",)
+1775024879.183677 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.executors.high_throughput.zmq_pipes:148 put DEBUG: Sending TasksOutgoing message
+1775024879.183799 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.executors.high_throughput.zmq_pipes:150 put DEBUG: Sent TasksOutgoing message
+1775024879.183878 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.dflow:703 launch_task INFO: Parsl task 1 try 0 launched on executor HighThroughputExecutor with executor id 2
+1775024879.183967 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard out for task 1 will not be redirected.
+1775024879.184037 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.dataflow.dflow:1199 log_std_stream INFO: Standard error for task 1 will not be redirected.
+1775024879.184130 2026-04-01 01:27:59 MainProcess-2055276 Task-Launch_0-138213985347264 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _launch_if_ready_async on thread Task-Launch_0
+1775024883.784288 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024883.784730 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024883.786749 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024883.787101 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024883.787245 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024883.787905 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:197 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Scaling out 1 initial blocks
+1775024883.788010 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.status_handling:207 scale_out_facade INFO: [Scaling executor HighThroughputExecutor] Scaling out by 1 blocks
+1775024883.788198 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.status_handling:210 scale_out_facade INFO: [Scaling executor HighThroughputExecutor] Allocated block ID 0
+1775024883.788348 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.status_handling:265 _launch_block DEBUG: [Scaling executor HighThroughputExecutor] Submitting to provider with job_name parsl.HighThroughputExecutor.block-0
+1775024883.788804 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.providers.local.local:208 submit DEBUG: Launching
+1775024883.788909 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.utils:498 execute_wait DEBUG: Creating process with command '/bin/bash -c 'echo - >/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/submit_scripts/parsl.HighThroughputExecutor.block-0.1775024883.788447.sh.ec && { { bash /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/submit_scripts/parsl.HighThroughputExecutor.block-0.1775024883.788447.sh 1>/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/submit_scripts/parsl.HighThroughputExecutor.block-0.1775024883.788447.sh.out 2>/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/submit_scripts/parsl.HighThroughputExecutor.block-0.1775024883.788447.sh.err ; echo $? > /home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/012/submit_scripts/parsl.HighThroughputExecutor.block-0.1775024883.788447.sh.ec ; } >/dev/null 2>&1 & echo "PID:$!" ; }''
+1775024883.812855 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.utils:506 execute_wait DEBUG: Created process with pid 2055316. Performing communicate
+1775024883.817325 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.utils:509 execute_wait DEBUG: Process 2055316 returned 0
+1775024883.817549 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.utils:515 execute_wait DEBUG: Execution of command in process 2055316 completed normally
+1775024883.817774 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.status_handling:268 _launch_block DEBUG: [Scaling executor HighThroughputExecutor] Launched block 0 with job ID 2055318
+1775024883.817953 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 0/1 running/pending blocks
+1775024883.818053 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024883.818158 2026-04-01 01:28:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024888.819360 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024888.819868 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024888.821748 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024888.822087 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024888.822238 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024888.822367 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024888.822501 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024888.822589 2026-04-01 01:28:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024893.823517 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024893.823860 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024893.825353 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024893.825590 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024893.825677 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024893.825753 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024893.825817 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024893.825869 2026-04-01 01:28:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024898.826530 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024898.826793 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024898.828269 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024898.828511 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024898.828588 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024898.828674 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024898.828751 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024898.828836 2026-04-01 01:28:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024903.829512 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024903.829879 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024903.831422 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024903.831770 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024903.831870 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024903.831978 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024903.832073 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024903.832181 2026-04-01 01:28:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024908.833035 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024908.833488 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024908.835405 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024908.835771 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024908.835889 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024908.836019 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024908.836158 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024908.836269 2026-04-01 01:28:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024913.837019 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024913.837568 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024913.839028 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024913.839186 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024913.839258 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024913.839342 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024913.839411 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024913.839461 2026-04-01 01:28:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024918.840070 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024918.840420 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024918.842359 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024918.842604 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024918.842685 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024918.842770 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024918.842842 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024918.842900 2026-04-01 01:28:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024923.843614 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024923.843956 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024923.845938 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024923.846243 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024923.846341 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024923.846433 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024923.846502 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024923.846558 2026-04-01 01:28:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024928.847291 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024928.847620 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024928.849482 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024928.849726 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024928.849810 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024928.849895 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024928.849966 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024928.850029 2026-04-01 01:28:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024933.850748 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024933.851100 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024933.852874 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024933.853192 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024933.853296 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024933.853404 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024933.853485 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024933.853545 2026-04-01 01:28:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024938.854241 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024938.854567 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024938.856085 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024938.856359 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024938.856439 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024938.856523 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024938.856593 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024938.856648 2026-04-01 01:28:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024943.857338 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024943.857649 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024943.859181 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024943.859410 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024943.859510 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024943.859591 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024943.859655 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024943.859707 2026-04-01 01:29:03 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024948.864328 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024948.864462 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024948.874530 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024948.874599 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024948.874625 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024948.874657 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024948.874683 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024948.874703 2026-04-01 01:29:08 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024953.881258 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024953.881379 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024953.881755 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024953.881821 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024953.881848 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024953.881879 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024953.881913 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024953.881933 2026-04-01 01:29:13 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024958.882147 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024958.882266 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024958.893170 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024958.893282 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024958.893313 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024958.893348 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024958.893375 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024958.893398 2026-04-01 01:29:18 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024963.902033 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024963.902160 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024963.908336 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024963.908432 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024963.908473 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024963.908515 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024963.908550 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024963.908589 2026-04-01 01:29:23 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024968.908957 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024968.909163 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024968.913150 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024968.913254 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024968.913290 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024968.913332 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024968.913368 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024968.913395 2026-04-01 01:29:28 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024973.913688 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024973.913841 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024973.914304 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024973.914387 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024973.914432 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024973.914470 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024973.914501 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024973.914526 2026-04-01 01:29:33 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024978.918378 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024978.918534 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024978.926230 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024978.926410 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024978.926479 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024978.926552 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024978.926617 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024978.926674 2026-04-01 01:29:38 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024983.927031 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024983.927239 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024983.931146 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024983.931303 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024983.931367 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024983.931439 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024983.931504 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024983.931559 2026-04-01 01:29:43 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024988.934406 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024988.934644 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024988.935265 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024988.935363 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024988.935415 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024988.935477 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024988.935532 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024988.935579 2026-04-01 01:29:48 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024993.939400 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024993.939599 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775024993.944173 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:106 run DEBUG: Received command client response
+1775024993.944308 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:184 _general_strategy DEBUG: general strategy starting with strategy_type simple for 1 executors
+1775024993.944367 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:194 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategizing for executor
+1775024993.944437 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:220 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Executor 2 active tasks, 2 active slots, and 1/0 running/pending blocks
+1775024993.944497 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.jobs.strategy:312 _general_strategy DEBUG: [Scaling executor HighThroughputExecutor] Strategy case 3: no changes necessary to current block load
+1775024993.944551 2026-04-01 01:29:53 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.process_loggers:27 wrapped DEBUG: Normal ending for _general_strategy on thread JobStatusPoller-Timer-Thread-138214405937472
+1775024998.947704 2026-04-01 01:29:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:77 run DEBUG: Sending command client command
+1775024998.947922 2026-04-01 01:29:58 MainProcess-2055276 JobStatusPoller-Timer-Thread-138214405937472-138214404138688 parsl.executors.high_throughput.zmq_pipes:104 run DEBUG: Receiving command client response
+1775025002.112264 2026-04-01 01:30:02 MainProcess-2055276 MainThread-138217114457920 parsl.dataflow.dflow:1090 atexit_cleanup WARNING: Python is exiting with a DFK still running. You should call parsl.dfk().cleanup() before exiting to release any resources

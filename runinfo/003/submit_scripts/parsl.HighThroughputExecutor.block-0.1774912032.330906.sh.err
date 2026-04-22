@@ -1,0 +1,29 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/003/submit_scripts/parsl.HighThroughputExecutor.block-0.1774912032.330906.sh: line 1: cd: too many arguments
+Previous Simulations: 0
+New Simulations: 9
+[18:08:04] SMILES Parse Error: syntax error while parsing: NC(=O)NCH2F
+[18:08:04] SMILES Parse Error: check for mistakes around position 9:
+[18:08:04] NC(=O)NCH2F
+[18:08:04] ~~~~~~~~^
+[18:08:04] SMILES Parse Error: Failed parsing SMILES 'NC(=O)NCH2F' for input: 'NC(=O)NCH2F'
+[18:08:05] SMILES Parse Error: syntax error while parsing: NC(=O)NCHF2
+[18:08:05] SMILES Parse Error: check for mistakes around position 9:
+[18:08:05] NC(=O)NCHF2
+[18:08:05] ~~~~~~~~^
+[18:08:05] SMILES Parse Error: Failed parsing SMILES 'NC(=O)NCHF2' for input: 'NC(=O)NCHF2'
+Previous Simulations: 0
+New Simulations: 6
+Previous Simulations: 6
+New Simulations: 5
+Previous Simulations: 9
+New Simulations: 9
+[18:12:03] Explicit valence for atom # 1 S, 7, is greater than permitted
+Previous Simulations: 16
+New Simulations: 8
+Previous Simulations: 11
+New Simulations: 8
+Previous Simulations: 24
+New Simulations: 7
+Previous Simulations: 19
+New Simulations: 18
+[18:23:35] Explicit valence for atom # 1 C, 5, is greater than permitted

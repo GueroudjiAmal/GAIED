@@ -1,0 +1,46 @@
+/home/agueroudji/Work/mofa/academy/examples/07-mol-design/runinfo/009/submit_scripts/parsl.HighThroughputExecutor.block-0.1775023670.0067577.sh: line 1: cd: too many arguments
+Previous Simulations: 0
+New Simulations: 7
+[01:09:02] Can't kekulize mol.  Unkekulized atoms: 3
+Previous Simulations: 0
+New Simulations: 7
+Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<StructuredTool.ainvoke() done, defined at /home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/tools/structured.py:59> exception=ValueError('Parse failure for O=c1[nH]cc(=O)[nH]1')>
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/concurrent/futures/process.py", line 253, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 166, in _compute_energy_sync
+    xyz = _generate_initial_xyz(smiles)
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 138, in _generate_initial_xyz
+    raise ValueError(f'Parse failure for {mol_string}')
+ValueError: Parse failure for O=c1[nH]cc(=O)[nH]1
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/tools/structured.py", line 70, in ainvoke
+    return await super().ainvoke(input, config, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/tools/base.py", line 652, in ainvoke
+    return await self.arun(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1131, in arun
+    raise error_to_raise
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/tools/base.py", line 1097, in arun
+    response = await coro_with_context(coro, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/miniconda3/envs/07/lib/python3.13/site-packages/langchain_core/tools/structured.py", line 124, in _arun
+    return await self.coroutine(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agueroudji/Work/mofa/academy/examples/07-mol-design/mol_design_agents.py", line 249, in compute_ionization_energy
+    ionization_energy = await loop.run_in_executor(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+ValueError: Parse failure for O=c1[nH]cc(=O)[nH]1
+/home/agueroudji/miniconda3/envs/07/lib/python3.13/multiprocessing/resource_tracker.py:276: UserWarning: resource_tracker: There appear to be 7 leaked semaphore objects to clean up at shutdown: {'/mp-58qifbbm', '/mp-cesc8of1', '/mp-8sh0wqrb', '/mp-hoif04zq', '/mp-3bcbbye6', '/mp-7hzxyqhv', '/mp-oik5cbis'}
+  warnings.warn(

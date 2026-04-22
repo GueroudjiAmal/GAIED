@@ -1,0 +1,5 @@
+1775027422.661972 2026-04-01 02:10:22 MainProcess-2060571 MainThread-125756876040000 parsl.executors.high_throughput.interchange:119 __init__ INFO: Attempting connection to client at 127.0.0.1 on ports: 55680,55640,55157
+1775027422.663810 2026-04-01 02:10:22 MainProcess-2060571 MainThread-125756876040000 parsl.executors.high_throughput.interchange:131 __init__ INFO: Connected to client
+1775027422.663966 2026-04-01 02:10:22 MainProcess-2060571 MainThread-125756876040000 parsl.executors.high_throughput.interchange:160 __init__ INFO: Bound to port 54361 for incoming worker connections
+1775027422.664010 2026-04-01 02:10:22 MainProcess-2060571 MainThread-125756876040000 parsl.executors.high_throughput.interchange:178 __init__ INFO: Platform info: {'parsl_v': '2026.03.23', 'python_v': '3.13.0', 'os': 'Linux', 'hostname': 'agueroudji-x1', 'dir': '/home/agueroudji/Work/mofa/academy/examples/07-mol-design'}
+1775027422.664037 2026-04-01 02:10:22 MainProcess-2060571 MainThread-125756876040000 parsl.executors.high_throughput.interchange:283 start INFO: Starting main interchange method
